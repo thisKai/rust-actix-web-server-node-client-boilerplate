@@ -1,6 +1,6 @@
 /target
 Cargo.lock
 
-/client/dist
+/www
 node_modules
 package-lock.json

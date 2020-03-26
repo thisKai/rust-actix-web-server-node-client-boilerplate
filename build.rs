@@ -7,7 +7,7 @@ fn main() -> std::io::Result<()> {
     NpmBuild::new(".")
         .install()?
         .run("build")?
-        .target("./client/dist")
+        .target("./www")
         .to_resource_dir()
         .build()
 }

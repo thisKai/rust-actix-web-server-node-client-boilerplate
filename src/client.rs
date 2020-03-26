@@ -5,7 +5,7 @@ mod inner {
     use {actix_files::Files, actix_web::web::block, std::process::Command};
 
     pub fn static_files() -> Files {
-        Files::new("/", "./client/dist").index_file("index.html")
+        Files::new("/", "./www").index_file("index.html")
     }
 
     pub async fn dev_tools() {
