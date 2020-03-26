@@ -1,10 +1,10 @@
-use actix_web_static_files::NpmBuild;
+use {actix_web_static_files::NpmBuild, std::io};
 
-fn main() {
+fn main() -> io::Result<()> {
     NpmBuild::new(".")
-        .install().unwrap()
-        .run("build").unwrap()
+        .install()?
+        .run("build")?
         .target("./client/dist")
         .to_resource_dir()
-        .build().unwrap();
+        .build()
 }
