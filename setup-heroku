@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+heroku create --buildpack emk/rust
+heroku buildpacks:add --index 1 heroku/nodejs
