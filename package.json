@@ -4,6 +4,7 @@
   "description": "",
   "author": "Kai <thiskaiguy@gmail.com>",
   "license": "ISC",
+  "private": true,
   "scripts": {
     "build": "",
     "dev": ""
