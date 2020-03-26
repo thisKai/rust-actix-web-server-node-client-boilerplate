@@ -7,6 +7,8 @@ use {
 
 #[actix_rt::main]
 async fn main() -> std::io::Result<()> {
+    client::dev_tools().await;
+
     let port = server_port();
 
     println!("Starting server, listening on 0.0.0.0:{}", port);

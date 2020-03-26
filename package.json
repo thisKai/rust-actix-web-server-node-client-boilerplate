@@ -5,6 +5,7 @@
   "author": "Kai <thiskaiguy@gmail.com>",
   "license": "ISC",
   "scripts": {
-    "build": ""
+    "build": "",
+    "dev": ""
   }
 }
