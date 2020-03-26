@@ -37,5 +37,5 @@ mod inner {
         ResourceFiles::new("/", generated)
     }
 
-    pub fn dev_tools() {}
+    pub async fn dev_tools() {}
 }
