@@ -1,2 +1,6 @@
 /target
 Cargo.lock
+
+/client/dist
+node_modules
+package-lock.json

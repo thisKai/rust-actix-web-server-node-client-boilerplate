@@ -1,0 +1,10 @@
+{
+  "name": "rust-actix-web-server-node-client-boilerplate",
+  "version": "0.1.0",
+  "description": "",
+  "author": "Kai <thiskaiguy@gmail.com>",
+  "license": "ISC",
+  "scripts": {
+    "build": ""
+  }
+}
