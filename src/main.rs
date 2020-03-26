@@ -1,20 +1,20 @@
+mod client;
+
 use {
     actix_web::{App, HttpServer},
-    actix_web_static_files::ResourceFiles,
-    std::{collections::HashMap, env},
+    std::env,
 };
-
-include!(concat!(env!("OUT_DIR"), "/generated.rs"));
 
 #[actix_rt::main]
 async fn main() -> std::io::Result<()> {
-    HttpServer::new(move || {
-        let generated = generate();
-        App::new().service(ResourceFiles::new("/", generated))
-    })
-    .bind(("0.0.0.0", server_port()))?
-    .run()
-    .await
+    let port = server_port();
+
+    println!("Starting server, listening on 0.0.0.0:{}", port);
+
+    HttpServer::new(move || App::new().service(client::static_files()))
+        .bind(("0.0.0.0", port))?
+        .run()
+        .await
 }
 
 fn server_port() -> u16 {

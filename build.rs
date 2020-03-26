@@ -1,6 +1,9 @@
-use {actix_web_static_files::NpmBuild, std::io};
+#[cfg(debug_assertions)]
+fn main() {}
 
-fn main() -> io::Result<()> {
+#[cfg(not(debug_assertions))]
+fn main() -> std::io::Result<()> {
+    use actix_web_static_files::NpmBuild;
     NpmBuild::new(".")
         .install()?
         .run("build")?
