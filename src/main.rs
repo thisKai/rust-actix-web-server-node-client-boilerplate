@@ -7,7 +7,7 @@ use {
 
 #[actix_rt::main]
 async fn main() -> std::io::Result<()> {
-    client::dev_tools().await;
+    actix_rt::spawn(client::dev_tools());
 
     let port = server_port();
 
