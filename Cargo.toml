@@ -12,6 +12,7 @@ actix-web = "2.0"
 actix-rt = "1.0"
 actix-files = "0.2"
 actix-web-static-files = "2.0"
+listenfd = "0.3"
 
 [build-dependencies]
 actix-web-static-files = "2.0"
